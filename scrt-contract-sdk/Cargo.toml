@@ -1,0 +1,11 @@
+[package]
+name = "scrt-contract-sdk"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cosmwasm-std = { git = "https://github.com/enigmampc/SecretNetwork", tag = "v1.0.0" }
+secret-toolkit = { git = "https://github.com/enigmampc/secret-toolkit", rev = "b57fa0b01746cbdb5c3cf2bd3a8fdc5bfb86ed86" }
+bincode2 = "2.0.1"
+serde = { version = "1.0.117", default-features = false, features = ["derive", "alloc"] }
+schemars = "0.7"
