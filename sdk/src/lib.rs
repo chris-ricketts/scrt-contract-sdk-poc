@@ -1,13 +1,16 @@
-pub mod contract;
-pub mod error;
-pub mod handle;
-pub mod storage;
+pub use sdk_core::*;
 
 pub mod prelude {
     pub use crate::contract::Contract;
+    pub use crate::cosmwasm_std::{
+        Api, Env, Extern, HandleResult, InitResponse, Querier, QueryResult, StdError, StdResult,
+        Storage,
+    };
     pub use crate::error::StdErrorExt;
     pub use crate::handle::HandleResultExt;
     pub use crate::hookup_contract;
+    pub use crate::schemars::{self, JsonSchema};
+    pub use crate::serde::{self, Deserialize, Serialize};
     pub use crate::storage::{
         address_store::{
             ExecuteLoadWithStorage, ExecuteSaveWithStorage, LoadForAddress, SaveForAddress,
@@ -15,16 +18,7 @@ pub mod prelude {
         DynamicKey, DynamicLoad, DynamicSave, StaticKey, StaticLoad, StaticSave, StaticUpdate,
         Store,
     };
-    pub use cosmwasm_std::{
-        Api, Env, Extern, HandleResult, InitResponse, Querier, QueryResult, StdError, StdResult,
-        Storage,
-    };
-    pub use schemars::{self, JsonSchema};
-    pub use serde::{self, Deserialize, Serialize};
 }
-
-pub use cosmwasm_std;
-pub use secret_toolkit as toolkit;
 
 #[macro_export]
 macro_rules! hookup_contract {

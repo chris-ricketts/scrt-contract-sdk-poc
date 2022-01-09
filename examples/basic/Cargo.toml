@@ -18,4 +18,4 @@ incremental = false
 overflow-checks = true
 
 [dependencies]
-scrt-contract-sdk = { path = "../../scrt-contract-sdk" }
+scrt-contract-sdk = { path = "../../sdk" }

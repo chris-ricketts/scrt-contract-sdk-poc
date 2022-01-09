@@ -1,5 +1,5 @@
 [package]
-name = "scrt-contract-sdk"
+name = "sdk-core"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,3 +9,6 @@ secret-toolkit = { git = "https://github.com/enigmampc/secret-toolkit", rev = "b
 bincode2 = "2.0.1"
 serde = { version = "1.0.117", default-features = false, features = ["derive", "alloc"] }
 schemars = "0.7"
+rand_chacha = { version = "0.2.2", default-features = false }
+rand_core = { version = "0.5.1", default-features = false }
+sha2 = { version = "0.9.1", default-features = false }

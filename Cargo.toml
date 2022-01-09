@@ -1,5 +1,6 @@
 [workspace]
 members = [
-  "scrt-contract-sdk",
-  "contract_examples/basic"
+  "sdk",
+  "sdk/core",
+  "examples/basic"
 ]

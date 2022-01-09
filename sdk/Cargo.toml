@@ -1,0 +1,7 @@
+[package]
+name = "scrt-contract-sdk"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sdk-core = { path = "core" }
